@@ -151,7 +151,7 @@
         //                                        │                  │                  │                  │                  │                  │                  │                  │
         //                                        └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &mt BP_DLR BP_DQOT        &kp BP_LGIL       &kp BP_RGIL      &kp BP_LPRN        &kp BP_RPRN                     &mt BP_PCNT BP_ BP_AT       &kp BP_PLUS       &kp BP_MINS      &kp BP_SLSH     &mt BP_EQL BP_ASTR
+                &mt BP_DLR BP_DQOT        &kp BP_LGIL       &kp BP_RGIL      &kp BP_LPRN        &kp BP_RPRN                     &mt BP_PCNT BP_AT           &kp BP_PLUS       &kp BP_MINS      &kp BP_SLSH     &mt BP_EQL BP_ASTR
                 &mt BP_HASH BP_1          &kp BP_2          &kp BP_3         &mt LSHFT BP_4     &kp BP_5                        &mt BP_GRAV BP_6            &mt RSHFT BP_7    &kp BP_8         &kp BP_9        &mt BP_DEGR BP_0
                 &mt RA(BP_HASH) BP_MDSH   &kp BP_LESS       &kp BP_GRTR      &kp BP_LBRC        &kp BP_RBRC                     &mt BP_PMIL RA(BP_AT)       &kp RA(BP_PLUS)   &kp RA(BP_MINS)  &kp RA(BP_SLSH) &mt RA(BP_EQL) RA(BP_ASTR)
                                                             &trans           &trans             &trans                          &trans                      &trans            &trans
