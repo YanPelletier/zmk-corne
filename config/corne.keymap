@@ -23,7 +23,7 @@
 #define FUNCTION    2
 #define NAV         3
 #define NUMPAD      4
-#defien BLUETOOTH   5
+#define BLUETOOTH   5
 
 #define BP_B        Q
 #define BP_ECUT     W
