@@ -113,6 +113,14 @@
             #binding-cells = <0>;
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
         };
+        dt: dual_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -121,7 +129,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < 10 11 12 13 23 >; 
+            hold-trigger-key-positions = < 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35 >; 
             hold-trigger-on-release;
         };
         hmr: home_row_mod_right {
@@ -132,7 +140,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < 15 16 17 18 26 >; 
+            hold-trigger-key-positions = < 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 >; 
             hold-trigger-on-release;
         };
     };
@@ -152,10 +160,10 @@
         //                                        │ ESC              │ BSPC      NUMSYB │ ENTER        NAV │                  │ DEL          MEH │ SPACE     NUMSYB │ TAB              │
         //                                        └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &kp BP_B           &mt  BP_W BP_ECUT  &kp  BP_P         &kp      BP_O        &kp BP_EGRV                     &kp BP_DCRC                 &mt BP_M BP_V     &kp BP_D         &kp BP_L        &mt BP_Z BP_J
-                &hml LWIN      BP_A        &hml LALT BP_U     &hml LCTRL BP_I   &hml     LSHFT BP_E  &kp BP_COMM                     &mt BP_CCED BP_C            &hmr RSHFT BP_T   &hmr RCTRL BP_S  &hmr LALT BP_R  &hmr RWIN BP_N
-                &lt  FUNCTION  BP_AGRV     &kp  BP_Y          &kp  BP_X         &kp      BP_DOT      &kp BP_K                        &kp BP_APOS                 &kp BP_Q          &kp BP_G         &kp BP_H        &lt FUNCTION BP_F
-                                                              &kp  ESC          &bspc_mo NUMSYM 0    &lt NAV ENTER                   &sk RALT                    &lt NUMSYM SPACE  &kp TAB
+                &lt BLUETOOTH  BP_B     &dt  BP_W BP_ECUT  &kp  BP_P        &kp      BP_O         &kp BP_EGRV                 &kp BP_DCRC         &dt BP_M BP_V       &kp BP_D           &kp BP_L           &dt BP_Z BP_J
+                &hml LWIN      BP_A     &hml LALT BP_U     &hml LCTRL BP_I  &hml     LSHFT  BP_E  &kp BP_COMM                 &dt BP_CCED BP_C    &hmr RSHFT BP_T     &hmr RCTRL BP_S    &hmr LALT BP_R     &hmr RWIN BP_N
+                &lt  FUNCTION  BP_AGRV  &kp  BP_Y          &kp  BP_X        &kp      BP_DOT       &kp BP_K                    &kp BP_APOS         &kp BP_Q            &kp BP_G           &kp BP_H           &lt FUNCTION BP_F
+                                                           &kp  ESC         &bspc_mo NUMSYM 0     &lt NAV ENTER               &sk RALT            &lt NUMSYM SPACE    &kp TAB
             >;
         };
 
