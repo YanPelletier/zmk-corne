@@ -111,7 +111,7 @@
         caps_word: caps_word {
             compatible = "zmk,behavior-caps-word";
             #binding-cells = <0>;
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE BP_A BP_AGRV BP_B BP_C BP_CCED BP_D BP_DCRC BP_E BP_ECUT BP_GRAV BP_F BP_G BP_H BP_I BP_J BP_K BP_L BP_M BP_N BP_O BP_P BP_Q BP_R BP_S BP_T BP_U BP_V BP_W BP_X BP_Y BP_Z >;
         };
         dt: dual_tap {
             compatible = "zmk,behavior-hold-tap";
