@@ -16,7 +16,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define BEPO1       0
 #define BEPO2       1
@@ -238,17 +237,17 @@
         layer_nav { // Layer 4
                 display-name = "NAV";
         //  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐                  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐
-        //  │                  │                  │                  │ PRINTSCREEN      │                  │                  │                  │ PGUP             │ HOME             │ UP               │ END              │ SCROLL UP        │                  │
+        //  │                  │                  │                  │ PRINTSCREEN      │                  │                  │                  │ PGUP             │ HOME             │ UP               │ END              │                  │                  │
         //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-        //  │                  │                  │                  │                  │                  │                  │                  │ PGDOWN           │ LEFT             │ DOWN             │ RIGHT            │ SCROLL DOWN      │                  │
+        //  │                  │                  │                  │                  │                  │                  │                  │ PGDOWN           │ LEFT             │ DOWN             │ RIGHT            │                  │                  │
         //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
         //  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │
         //  └──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────┘
         //                                                           │ SOFT OFF         │                  │                  │                  │CAPS WORD         │                  │                  │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &none           &trans                    &trans            &kp PSCRN        &trans             &trans                          &kp PG_UP                   &kp HOME          &kp UP           &kp END         &msc SCRL_UP      &none
-                &none           &trans                    &trans            &trans           &trans             &trans                          &kp PG_DN                   &kp LEFT          &kp DOWN         &kp RIGHT       &msc SCRL_DOWN    &none
+                &none           &trans                    &trans            &kp PSCRN        &trans             &trans                          &kp PG_UP                   &kp HOME          &kp UP           &kp END         trans             &none
+                &none           &trans                    &trans            &trans           &trans             &trans                          &kp PG_DN                   &kp LEFT          &kp DOWN         &kp RIGHT       &trans            &none
                 &none           &trans                    &trans            &trans           &trans             &trans                          &trans                      &trans            &trans           &trans          &trans            &none
                                                                             &soft_off        &trans             &trans                          &caps_word                  &trans            &trans
             >;
