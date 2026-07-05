@@ -159,7 +159,7 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = < 40 41 42 >;
+            key-positions = < 1 2 3 4 >;
             bindings = <&tog NUMPAD>;
         };
     };    
@@ -208,7 +208,7 @@
         layer_sym { // Layer 2
                 display-name = "Symboles";
         //  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐                  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐
-        //  │                  │ „                │ “                │ ”                │ ⩽                │ ⩾               │                  │                  │ +                │ ¼                │ ½                │ ¾                │                  │
+        //  │                  │ „                │ “                │ ”                │ ⩽                │ ⩾               │                  │                  │                  │ ¼                │ ½                │ ¾                │                  │
         //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
         //  │                  │ "                │ «                │ »                │ (                │ )                │                  │ @                │ +                │ -                │ /                │ *                │                  │                  │
         //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
@@ -217,7 +217,7 @@
         //                                                           │                  │                  │                  │                  │                  │                  │                  │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &none           &kp RS(BP_MDSH)     &kp RS(BP_LESS)   &kp RS(BP_GRTR)  &kp RS(BP_LBRC)    &kp RS(BP_RBRC)                          &kp RS(RA(BP_AT))  &kp RS(RA(BP_PLUS)) &kp RS(RA(BP_MINS)) &kp RS(RA(BP_SLSH)) &kp RS(RA(BP_ASTR)) &none
+                &none           &kp RS(BP_MDSH)     &kp RS(BP_LESS)   &kp RS(BP_GRTR)  &kp RS(BP_LBRC)    &kp RS(BP_RBRC)                          &none              &kp LS(RA(BP_PLUS)) &kp LS(RA(BP_MINS)) &kp LS(RA(BP_SLSH)) &kp LS(RA(BP_ASTR)) &none
                 &none           &kp BP_DQOT         &kp BP_LGIL       &kp BP_RGIL      &kp BP_LPRN        &kp BP_RPRN                              &kp BP_AT          &kp BP_PLUS         &kp BP_MINS         &kp BP_SLSH         &kp BP_ASTR         &none
                 &none           &kp BP_MDSH         &kp BP_LESS       &kp BP_GRTR      &kp BP_LBRC        &kp BP_RBRC                              &kp RA(BP_AT)      &kp RA(BP_PLUS)     &kp RA(BP_MINS)     &kp RA(BP_SLSH)     &kp RA(BP_ASTR)     &none
                                                                       &trans           &trans             &trans                                   &trans             &trans              &trans
@@ -294,7 +294,7 @@
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
            bindings = <
                 &none           &trans                    &trans            &trans           &trans             &trans                          &trans                      &trans            &trans           &trans          &trans    &none 
-                &none           &bt BT_SEL 1              &bt BT_SEL 2      &bt BT_SEL 3     &bt BT_SEL 4       &bt BT_SEL 5                    &trans                      &trans            &trans           &trans          &trans    &none 
+                &none           &bt BT_SEL 0              &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3       &bt BT_SEL 4                    &trans                      &trans            &trans           &trans          &trans    &none 
                 &none           &trans                    &trans            &trans           &trans             &trans                          &trans                      &trans            &trans           &trans          &trans    &none 
                                                                             &trans           &trans             &trans                          &trans                      &trans            &trans
             >;
