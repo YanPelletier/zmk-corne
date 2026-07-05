@@ -1,6 +1,6 @@
 manifest:
   defaults:
-    revision: main
+    revision: improve-caps-word
   remotes:
     - name: urob
       url-base: https://github.com/urob
