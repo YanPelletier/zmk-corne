@@ -112,7 +112,7 @@
             compatible = "zmk,behavior-caps-word";
             #binding-cells = <0>;
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-            shift-list = <BP_B BP_ECUT BP_W BP_P BP_O BP_EGRV BP_A BP_U BP_I BP_E BP_AGRV BP_Y BP_X BP_DOT BP_K BP_DCRC BP_V BP_M BP_D BP_L BP_J BP_Z BP_C BP_CCED BP_T BP_S BP_R BP_N BP_APOS BP_Q BP_G BP_H BP_F>
+            shift-list = <BP_B BP_ECUT BP_W BP_P BP_O BP_EGRV BP_A BP_U BP_I BP_E BP_AGRV BP_Y BP_X BP_DOT BP_K BP_DCRC BP_V BP_M BP_D BP_L BP_J BP_Z BP_C BP_CCED BP_T BP_S BP_R BP_N BP_APOS BP_Q BP_G BP_H BP_F>;
         };
         dt: dual_tap {
             compatible = "zmk,behavior-hold-tap";
