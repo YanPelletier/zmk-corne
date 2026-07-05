@@ -246,7 +246,7 @@
         //                                                           │ SOFT OFF         │                  │                  │                  │CAPS WORD         │                  │                  │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &none           &trans                    &trans            &kp PSCRN        &trans             &trans                          &kp PG_UP                   &kp HOME          &kp UP           &kp END         trans             &none
+                &none           &trans                    &trans            &kp PSCRN        &trans             &trans                          &kp PG_UP                   &kp HOME          &kp UP           &kp END         &trans            &none
                 &none           &trans                    &trans            &trans           &trans             &trans                          &kp PG_DN                   &kp LEFT          &kp DOWN         &kp RIGHT       &trans            &none
                 &none           &trans                    &trans            &trans           &trans             &trans                          &trans                      &trans            &trans           &trans          &trans            &none
                                                                             &soft_off        &trans             &trans                          &caps_word                  &trans            &trans
