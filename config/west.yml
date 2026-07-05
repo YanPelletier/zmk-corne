@@ -5,16 +5,17 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: ethan605
-      url: https://github.com/ethan605/zmk-corne
+      url: https://github.com/ethan605
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    - name: ecaps-word
+    - name: zmk-corne
       remote: ethan605
       revision: main
       path: modules/ecaps-word
+      subdir: config/modules/ecaps-word
   self:
     path: config
