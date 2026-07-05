@@ -109,11 +109,19 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&bspc_del>;
         };
-        caps_word: caps_word {
-            compatible = "zmk,behavior-caps-word";
+        ecaps_word: ecaps_word {
+            compatible = "zmk,behavior-ecaps-word";
             #binding-cells = <0>;
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-            shift-list = <BP_B BP_ECUT BP_W BP_P BP_O BP_EGRV BP_A BP_U BP_I BP_E BP_AGRV BP_Y BP_X BP_DOT BP_K BP_DCRC BP_V BP_M BP_D BP_L BP_J BP_Z BP_C BP_CCED BP_T BP_S BP_R BP_N BP_APOS BP_Q BP_G BP_H BP_F>;
+            shift-list = <
+                BP_B  BP_ECUT BP_P  BP_O  BP_EGRV
+                BP_A  BP_U    BP_I  BP_E  BP_COMM
+                BP_AGRV BP_Y  BP_X  BP_DOT BP_K
+                BP_DCRC BP_V  BP_M  BP_D  BP_L
+                BP_J  BP_Z    BP_C  BP_CCED BP_T
+                BP_S  BP_R    BP_N  BP_APOS BP_Q
+                BP_G  BP_H    BP_F  BP_W
+            >;
         };
         dt: dual_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -250,7 +258,7 @@
                 &none           &trans                    &trans            &kp PSCRN        &trans             &trans                          &kp PG_UP                   &kp HOME          &kp UP           &kp END         &msc SCRL_UP      &none
                 &none           &trans                    &trans            &trans           &trans             &trans                          &kp PG_DN                   &kp LEFT          &kp DOWN         &kp RIGHT       &msc SCRL_DOWN    &none
                 &none           &trans                    &trans            &trans           &trans             &trans                          &trans                      &trans            &trans           &trans          &trans            &none
-                                                                            &soft_off        &trans             &trans                          &caps_word                  &trans            &trans
+                                                                            &soft_off        &trans             &trans                          &ecaps_word                 &trans            &trans
             >;
          };
 
