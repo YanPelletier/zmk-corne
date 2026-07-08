@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: YanPelletier
       url-base: https://github.com/YanPelletier
+    - name: m165437
+      url-base: https://github.com/M165437
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -14,5 +16,8 @@ manifest:
       remote: YanPelletier
       revision: main
       path: modules/ecaps-word
+    - name: nice-view-gem
+      remote: m165437
+      revision: main
   self:
     path: config
