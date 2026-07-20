@@ -153,6 +153,14 @@
             hold-trigger-key-positions = < 1 2 3 4 5 13 14 15 16 17 26 27 28 29 30 37 38 39 >; 
             hold-trigger-on-release;
         };
+        lt: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            bindings = <&mo>, <&kp>;
+            display-name = "Layer-Tap";
+        };
     };
 
     combos {
