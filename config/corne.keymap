@@ -200,14 +200,14 @@
     };
 
     macros {
-        app_switch_mac: app_switch_mac {
+        app_switch: app_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LGUI>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp TAB>
                 , <&macro_pause_for_release>
-                , <&macro_release &kp LGUI>;
+                , <&macro_release &kp LALT>;
         };
         app_switch_mac: app_switch_mac {
             compatible = "zmk,behavior-macro";
