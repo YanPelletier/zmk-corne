@@ -26,6 +26,8 @@
 #define NUMPAD      5
 #define BLTH        6
 #define GAME        7
+#define MACOS       8
+#define NAV_MAC     9
 
 #define BP_B        Q
 #define BP_ECUT     W
@@ -304,7 +306,7 @@
                 &none           &trans                    &trans            &kp PSCRN        &trans             &trans                          &kp PG_UP                   &kp HOME          &kp UP           &kp END         &msc SCRL_UP      &none
                 &none           &trans                    &trans            &trans           &trans             &trans                          &kp PG_DN                   &kp LEFT          &kp DOWN         &kp RIGHT       &msc SCRL_DOWN    &none
                 &none           &trans                    &trans            &trans           &trans             &trans                          &trans                      &trans            &trans           &trans          &trans            &none
-                                                                            &soft_off        &trans             &trans                          &ecaps_word                 &trans            &trans
+                                                                            &soft_off        &trans             &trans                          &ecaps_word                 &trans            &kp LA(TAB)
             >;
          };
 
@@ -342,7 +344,7 @@
                 &none           &trans                    &trans            &trans           &trans             &trans                          &trans                      &trans            &trans           &trans          &trans    &none 
                 &none           &bt BT_SEL 0              &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3       &bt BT_SEL 4                    &bt BT_CLR                  &trans            &trans           &trans          &trans    &none 
                 &none           &trans                    &trans            &trans           &trans             &trans                          &trans                      &trans            &trans           &trans          &trans    &none 
-                                                                            &trans           &trans             &trans                          &trans                      &trans            &trans
+                                                                            &to BEPO1        &trans             &trans                          &trans                      &trans            &to MACOS
             >;
         };
 
@@ -365,5 +367,44 @@
             >;
 
         };
+
+        layer_mac_os { // Layer 8
+                display-name = "MACOS";
+        //  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐                  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐
+        //  │                  │ B           BLTH │ É                │ P                │ O                │ È                │                  │ ^                │ V                │ D                │ L                │ J                │                  │
+        //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+        //  │                  │ A           LWIN │ U           LALT │ I          LCTRL │ E         LSHIFT │ ,                │                  │ C                │ T         RSHIFT │ S          RCTRL │ R           LALT │ N           RWIN │                  │
+        //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+        //  │                  │ À           FCTN │ Y                │ X                │ .                │ K                │                  │ ’                │ Q                │ G                │ H                │ F           FCTN │                  │
+        //  └──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────┘
+        //                                                           │ ESC        BEPO2 │ BSPC         SYM │ ENTER        NAV │                  │ OSM RALT         │ SPACE        SYM │ TAB        BEPO2 │
+        //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
+            bindings = <
+                &none           &lt  BLTH  BP_B     &kp  BP_ECUT       &kp  BP_P         &kp   BP_O          &kp BP_EGRV                          &kp BP_DCRC         &kp  BP_V          &kp  BP_D          &kp  BP_L          &kp  BP_J          &none
+                &none           &hml LWIN  BP_A     &hml LALT BP_U     &hml LCTRL BP_I   &hml  LSHFT  BP_E   &kp BP_COMM                          &kp BP_C            &hmr RSHFT BP_T    &hmr RCTRL BP_S    &hmr LALT BP_R     &hmr RWIN BP_N     &none
+                &none           &lt  FCTN  BP_AGRV  &kp  BP_Y          &kp  BP_X         &kp   BP_DOT        &kp BP_K                             &kp BP_APOS         &kp  BP_Q          &kp  BP_G          &kp  BP_H          &lt  FCTN BP_F     &none
+                                                                       &lt2 BEPO2 ESC    &bdlt SYM 0         &lt NAV_MAC ENTER                    &sk RALT            &lt  SYM   SPACE   &lt2 BEPO2 TAB
+            >;
+        };
+
+        layer_nav_mac { // Layer 9
+                display-name = "NAV MACOS";
+        //  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐                  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐
+        //  │                  │                  │                  │ PRINTSCREEN      │                  │                  │                  │ PGUP             │ LGUI-←           │ UP               │ LGUI-→           │ SCROLL UP        │                  │
+        //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+        //  │                  │                  │                  │                  │                  │                  │                  │ PGDOWN           │ LEFT             │ DOWN             │ RIGHT            │ SCROLL DOWN      │                  │
+        //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+        //  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │
+        //  └──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────┘
+        //                                                           │ SOFT OFF         │                  │                  │                  │ CAPS WORD        │                  │                  │
+        //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
+            bindings = <
+                &none           &trans             &trans              &kp PSCRN          &trans             &trans                               &kp PG_UP           &kp LG(LEFT)      &kp UP              &kp LG(RIGHT)      &msc SCRL_UP      &none
+                &none           &trans             &trans              &hml LALT BP_I     &trans             &trans                               &kp PG_DN           &kp LEFT          &kp DOWN            &kp RIGHT          &msc SCRL_DOWN    &none
+                &none           &trans             &trans              &trans             &trans             &trans                               &trans              &trans            &trans              &trans            &trans            &none
+                                                                       &soft_off          &trans             &trans                               &ecaps_word         &trans            &kp LG(TAB)
+            >;
+         };
+
     };
 };
