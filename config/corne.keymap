@@ -192,9 +192,9 @@
             // gauche + droite
             hold-trigger-key-positions = <
                     6  7  8  9 10       1  2  3  4  5
-                18 19 20 21 22      13 14 15 16 17
-                30 31 32 33 34      25 26 27 28 29
-                        39 40 41      36 37 38 
+                   18 19 20 21 22      13 14 15 16 17
+                   30 31 32 33 34      25 26 27 28 29
+                         39 40 41      36 37 38 
             >;        };
     };
 
@@ -371,19 +371,19 @@
         layer_mac_os { // Layer 8
                 display-name = "MACOS";
         //  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐                  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐
-        //  │                  │ B           BLTH │ É                │ P                │ O                │ È                │                  │ ^                │ V                │ D                │ L                │ J                │                  │
+        //  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │
         //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-        //  │                  │ A           LWIN │ U           LALT │ I          LCTRL │ E         LSHIFT │ ,                │                  │ C                │ T         RSHIFT │ S          RCTRL │ R           LALT │ N           RWIN │                  │
+        //  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │
         //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-        //  │                  │ À           FCTN │ Y                │ X                │ .                │ K                │                  │ ’                │ Q                │ G                │ H                │ F           FCTN │                  │
+        //  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │                  │
         //  └──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────┘
-        //                                                           │ ESC        BEPO2 │ BSPC         SYM │ ENTER        NAV │                  │ OSM RALT         │ SPACE        SYM │ TAB        BEPO2 │
+        //                                                           │                  │                  │ ENTER    NAV_MAC │                  │                  │                  │                  │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &none           &lt  BLTH  BP_B     &kp  BP_ECUT       &kp  BP_P         &kp   BP_O          &kp BP_EGRV                          &kp BP_DCRC         &kp  BP_V          &kp  BP_D          &kp  BP_L          &kp  BP_J          &none
-                &none           &hml LWIN  BP_A     &hml LALT BP_U     &hml LCTRL BP_I   &hml  LSHFT  BP_E   &kp BP_COMM                          &kp BP_C            &hmr RSHFT BP_T    &hmr RCTRL BP_S    &hmr LALT BP_R     &hmr RWIN BP_N     &none
-                &none           &lt  FCTN  BP_AGRV  &kp  BP_Y          &kp  BP_X         &kp   BP_DOT        &kp BP_K                             &kp BP_APOS         &kp  BP_Q          &kp  BP_G          &kp  BP_H          &lt  FCTN BP_F     &none
-                                                                       &lt2 BEPO2 ESC    &bdlt SYM 0         &lt NAV_MAC ENTER                    &sk RALT            &lt  SYM   SPACE   &lt2 BEPO2 TAB
+                &none           &trans                    &trans            &trans          &trans             &trans                              &trans              &trans            &trans           &trans          &trans    &none 
+                &none           &trans                    &trans            &trans          &trans             &trans                              &trans              &trans            &trans           &trans          &trans    &none 
+                &none           &trans                    &trans            &trans          &trans             &trans                              &trans              &trans            &trans           &trans          &trans    &none 
+                                                                            &trans          &trans             &lt NAV_MAC ENTER                   &trans              &trans            &trans
             >;
         };
 
