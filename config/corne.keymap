@@ -399,9 +399,9 @@
         //                                                           │ SOFT OFF         │                  │                  │                  │ CAPS WORD        │                  │                  │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &none           &trans             &trans              &kp PSCRN          &trans             &trans                               &kp PG_UP           &kp LG(LEFT)      &kp UP              &kp LG(RIGHT)      &msc SCRL_UP      &none
+                &none           &trans             &trans              &kp PSCRN          &trans             &trans                               &kp PG_UP           &kp LG(←)         &kp UP              &kp LG(→)          &msc SCRL_UP      &none
                 &none           &trans             &trans              &hml LALT BP_I     &trans             &trans                               &kp PG_DN           &kp LEFT          &kp DOWN            &kp RIGHT          &msc SCRL_DOWN    &none
-                &none           &trans             &trans              &trans             &trans             &trans                               &trans              &trans            &trans              &trans            &trans            &none
+                &none           &trans             &trans              &trans             &trans             &trans                               &trans              &trans            &trans              &trans             &trans            &none
                                                                        &soft_off          &trans             &trans                               &ecaps_word         &trans            &kp LG(TAB)
             >;
          };
