@@ -390,7 +390,7 @@
         layer_nav_mac { // Layer 9
                 display-name = "MACOS NAV";
         //  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐                  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐
-        //  │                  │                  │                  │ PRINTSCREEN      │                  │                  │                  │ PGUP             │ LGUI-←           │ UP               │ LGUI-→           │ SCROLL UP        │                  │
+        //  │                  │                  │                  │ PRINTSCREEN      │                  │                  │                  │ PGUP             │ HOME             │ UP               │ END              │ SCROLL UP        │                  │
         //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
         //  │                  │                  │                  │                  │                  │                  │                  │ PGDOWN           │ LEFT             │ DOWN             │ RIGHT            │ SCROLL DOWN      │                  │
         //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
@@ -399,10 +399,10 @@
         //                                                           │ SOFT OFF         │                  │                  │                  │ CAPS WORD        │                  │                  │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &none           &trans             &trans              &kp PSCRN          &trans             &trans                               &kp PG_UP           &kp LG(LEFT)      &kp UP              &kp LG(RIGHT)      &msc SCRL_UP      &none
+                &none           &trans             &trans              &kp PSCRN          &trans             &trans                               &kp PG_UP           &kp HOME          &kp UP              &kp END      &msc SCRL_UP      &none
                 &none           &trans             &trans              &hml LALT BP_I     &trans             &trans                               &kp PG_DN           &kp LEFT          &kp DOWN            &kp RIGHT          &msc SCRL_DOWN    &none
                 &none           &trans             &trans              &trans             &trans             &trans                               &trans              &trans            &trans              &trans             &trans            &none
-                                                                       &soft_off          &trans             &trans                               &ecaps_word         &trans            &kp LG(TAB)
+                                                                       &soft_off          &trans             &trans                               &ecaps_word         &trans            &kp LCTRL(TAB)
             >;
          };
 
