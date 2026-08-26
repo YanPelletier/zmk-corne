@@ -388,7 +388,7 @@
         };
 
         layer_nav_mac { // Layer 9
-                display-name = "MACOS NAV";
+                display-name = "MAC-NAV";
         //  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐                  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐
         //  │                  │                  │                  │ PRINTSCREEN      │                  │                  │                  │ PGUP             │ HOME             │ UP               │ END              │ SCROLL UP        │                  │
         //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
@@ -399,10 +399,10 @@
         //                                                           │ SOFT OFF         │                  │                  │                  │ CAPS WORD        │                  │                  │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &none           &trans             &trans              &kp PSCRN          &trans             &trans                               &kp PG_UP           &kp HOME          &kp UP              &kp END      &msc SCRL_UP      &none
+                &none           &trans             &trans              &kp PSCRN          &trans             &trans                               &kp PG_UP           &kp HOME          &kp UP              &kp END            &msc SCRL_UP      &none
                 &none           &trans             &trans              &hml LALT BP_I     &trans             &trans                               &kp PG_DN           &kp LEFT          &kp DOWN            &kp RIGHT          &msc SCRL_DOWN    &none
                 &none           &trans             &trans              &trans             &trans             &trans                               &trans              &trans            &trans              &trans             &trans            &none
-                                                                       &soft_off          &trans             &trans                               &ecaps_word         &trans            &kp LCTRL(TAB)
+                                                                       &soft_off          &trans             &trans                               &ecaps_word         &trans            &kp LC(TAB)
             >;
          };
 
