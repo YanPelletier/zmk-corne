@@ -157,6 +157,7 @@
 #define CSA_COMM    COMMA
 #define CSA_DOT     DOT
 #define CSA_APOS    APOS
+#define CSA_DCRC    LS(6)
 
 / {
     behaviors {
