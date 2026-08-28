@@ -31,7 +31,7 @@
 #define GAME        7
 #define MACOS       8
 #define NAV_MAC     9
-#define FR-CA      10
+#define FR_CA      10
 
 /* ============================================================
  * QwERTY → BÉPO 
@@ -306,7 +306,7 @@
         combo_fr_ca {
             timeout-ms = <50>;
             key-positions = < 24 25 26 27 36 >;
-            bindings = <&tog FCTN>;
+            bindings = <&tog FR_CA>;
         };        
     };    
 
