@@ -153,6 +153,11 @@
 #define CSA_CCED    RBKT
 #define CSA_UGR     INT1
 
+/* OTHERS */
+#define CSA_COMM    COMMA
+#define CSA_DOT     DOT
+#define CSA_APOS    APOS
+
 / {
     behaviors {
         bspc_del: backspace_delete {
@@ -516,9 +521,9 @@
         //                                                           │ ESC      SPECIAL │ BSPC         SYM │ ENTER        NAV │                  │ OSM RALT         │ SPACE        SYM │ TAB      SPECIAL │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &none           &lt  BLTH  CSA_B     &kp  CSA_ECUT       &kp  CSA_P         &kp   CSA_O          &kp CSA_EGRV                       &kp CSA_DCRC         &kp  CSA_V          &kp  CSA_D          &kp  CSA_L          &kp  CSA_J          &none
+                &none           &lt  BLTH  CSA_B     &kp  CSA_EAC        &kp  CSA_P         &kp   CSA_O          &kp CSA_EGR                        &kp CSA_DCRC         &kp  CSA_V          &kp  CSA_D          &kp  CSA_L          &kp  CSA_J          &none
                 &none           &hml LWIN  CSA_A     &hml LALT CSA_U     &hml LCTRL CSA_I   &hml  LSHFT  CSA_E   &kp CSA_COMM                       &kp CSA_C            &hmr RSHFT CSA_T    &hmr RCTRL CSA_S    &hmr LALT CSA_R     &hmr RWIN CSA_N     &none
-                &none           &lt  FCTN  CSA_AGRV  &kp  CSA_Y          &kp  CSA_X         &kp   CSA_DOT        &kp CSA_K                          &kp CSA_APOS         &kp  CSA_Q          &kp  CSA_G          &kp  CSA_H          &lt  FCTN CSA_F     &none
+                &none           &lt  FCTN  CSA_AGR   &kp  CSA_Y          &kp  CSA_X         &kp   CSA_DOT        &kp CSA_K                          &kp CSA_APOS         &kp  CSA_Q          &kp  CSA_G          &kp  CSA_H          &lt  FCTN CSA_F     &none
                                                                          &lt2 SPECIAL ESC   &bdlt SYM 0          &lt NAV ENTER                      &sk RALT             &lt  SYM   SPACE    &lt2 SPECIAL TAB
             >;
         };         
