@@ -148,10 +148,7 @@
 
 /* ACCENT AVAILABLE NATIVELY */
 #define CSA_EAC     FSLH
-#define CSA_EGR     SEMI
-#define CSA_AGR     BSLH
 #define CSA_CCED    RBKT
-#define CSA_UGR     INT1
 
 /* OTHERS */
 #define CSA_DCRC    LBKT
