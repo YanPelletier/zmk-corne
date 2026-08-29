@@ -17,6 +17,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include "keys_fr_csa.h"
 
 /* ============================================================
  * LAYER NUMBERS
@@ -34,7 +35,7 @@
 #define FR_CA      10
 
 /* ============================================================
- * QwERTY → BÉPO 
+ * BÉPO 
  * ============================================================ */
 #define BP_B        Q
 #define BP_ECUT     W
@@ -102,55 +103,6 @@
 #define BP_PCNT     EQUAL
 #define BP_PMIL     RA(EQUAL)
 #define BP_GRAV     LS(EQUAL)
-
-/* ============================================================
- * BÉPO logical → CSA
- * ============================================================ */
-/* Lowercase */
-#define CSA_A       A
-#define CSA_B       B
-#define CSA_C       C
-#define CSA_D       D
-#define CSA_E       E
-#define CSA_F       F
-#define CSA_G       G
-#define CSA_H       H
-#define CSA_I       I
-#define CSA_J       J
-#define CSA_K       K
-#define CSA_L       L
-#define CSA_M       M
-#define CSA_N       N
-#define CSA_O       O
-#define CSA_P       P
-#define CSA_Q       Q
-#define CSA_R       R
-#define CSA_S       S
-#define CSA_T       T
-#define CSA_U       U
-#define CSA_V       V
-#define CSA_W       W
-#define CSA_X       X
-#define CSA_Y       Y
-#define CSA_Z       Z
-
-/* NUMBERS */
-#define CSA_0       N0
-#define CSA_1       N1
-#define CSA_2       N2
-#define CSA_3       N3
-#define CSA_4       N4
-#define CSA_5       N5
-#define CSA_6       N6
-#define CSA_7       N7
-#define CSA_8       N8
-#define CSA_9       N9
-
-/* ACCENT AVAILABLE NATIVELY */
-#define CSA_EAC     FSLH
-#define CSA_CCED    RBKT
-#define CSA_DCRC    LBKT
-
 
 / {
     behaviors {
@@ -287,17 +239,17 @@
             bindings
                 = <&macro_tap &bt BT_SEL 0>
                 , <&macro_tap &to WINDOWS>;
-        };
-        csa_egrv: csa_e_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp APOS>, <&macro_tap &kp E>;
-        };
-        csa_apos: csa_apostrophe {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp APOS>, <&macro_tap &kp SPACE>;
-        };
+        };       
+//        csa_egrv: csa_e_grave {
+//            compatible = "zmk,behavior-macro";
+//            #binding-cells = <0>;
+//            bindings = <&macro_tap &kp APOS>, <&macro_tap &kp E>;
+//        };
+//        csa_apos: csa_apostrophe {
+//            compatible = "zmk,behavior-macro";
+//            #binding-cells = <0>;
+//            bindings = <&macro_tap &kp APOS>, <&macro_tap &kp SPACE>;
+//        };
     };
 
     combos {
@@ -525,10 +477,10 @@
         //                                                           │ ESC      SPECIAL │ BSPC         SYM │ ENTER        NAV │                  │ OSM RALT         │ SPACE        SYM │ TAB      SPECIAL │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &none           &lt  BLTH  CSA_B     &kp  CSA_EAC        &kp  CSA_P         &kp   CSA_O          &csa_egrv                          &kp CSA_DCRC         &kp  CSA_V          &kp  CSA_D          &kp  CSA_L          &kp  CSA_J          &none
-                &none           &hml LWIN  CSA_A     &hml LALT CSA_U     &hml LCTRL CSA_I   &hml  LSHFT  CSA_E   &kp CSA_COMM                       &kp CSA_C            &hmr RSHFT CSA_T    &hmr RCTRL CSA_S    &hmr LALT CSA_R     &hmr RWIN CSA_N     &none
-                &none           &lt  FCTN  BP_AGRV   &kp  CSA_Y          &kp  CSA_X         &kp   CSA_DOT        &kp CSA_K                          &csa_apos            &kp  CSA_Q          &kp  CSA_G          &kp  CSA_H          &lt  FCTN CSA_F     &none
-                                                                         &lt2 SPECIAL ESC   &bdlt SYM 0          &lt NAV ENTER                      &sk RALT             &lt  SYM   SPACE    &lt2 SPECIAL TAB
+                &none           &kp  BLTH  FR_B       &kp  FR_E_ACUTE  &kp  FR_P         &kp   FR_O         &kp FR_E_GRAVE                        &kp  FR_CARET       &kp  FR_V          &kp  FR_D          &kp  FR_L          &kp  FR_J           &none
+                &none           &hml LWIN  FR_A       &hml LALT  FR_U  &hml LCTRL  FR_I  &hml  LSHFT FR_E   &kp FR_COMMA                          &kp  FR_C           &hmr RSHFT FR_T    &hmr RCTRL   FR_S  &hmr LALT  FR_R    &hmr RWIN  FR_N     &none
+                &none           &lt  FCTN  FR_A_GRAVE &kp  FR_Y        &kp  FR_X         &kp   FR_DOT       &kp FR_K                              &kp  FR_APOS        &kp  FR_Q          &kp  FR_G          &kp  FR_H          &lt  FCTN  FR_F     &none
+                                                                       &lt2 SPECIAL ESC  &bdlt SYM 0        &lt NAV ENTER                         &sk  RALT           &lt  SYM   SPACE   &lt2 SPECIAL TAB
             >;
         };         
 
