@@ -1,31 +1,7 @@
 name: Build ZMK firmware
-
-on:
-  push:
-  pull_request:
-  workflow_dispatch:
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    container:
-      image: zmkfirmware/zmk-dev-arm:stable
-
-    steps:
-      - name: Checkout config repo
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
-
-      - name: Install west
-        run: |
-          python3 -m pip install --break-system-packages west
-
-      - name: Initialize ZMK
-        run: |
-          west init -m https://github.com/zmkfirmware/zmk.git --manifest-rev main .
-          west update
-
-      - name: Build firmware
-        run: |
-          west build -p auto -b nice_nano_v2 -- -DSHIELD="corne_left nice_view_adapter nice_view_battery" -DZMK_CONFIG=config
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+    
