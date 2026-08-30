@@ -108,11 +108,22 @@
 /* ============================================================
  * BÉPO overide for CSA
  * ============================================================ */
+/* ≠ */
+#define CSA_NOT_EQUAL (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))
+#define CSA_NEQ (FR_NOT_EQUAL)
+/* ′ */
+#define CSA_PRIME (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION)))
+/* # */
 #define CSA_HASH (LS(FR_N3))
+/* – */
 #define CSA_DASH (RA(FR_MINUS))
+/* ′ */
 #define CSA_PRIME (RA(FR_N1))
+/* ¶ */
 #define CSA_PARA (RA(FR_EQUAL))
+/* ‰ */
 #define CSA_PERMIL RA(FR_N5)
+/* ″ */
 #define CSA_DPRIME RA(FR_N2)
 
 / {
@@ -216,31 +227,25 @@
                          39 40 41      36 37 38 
             >;       
         };
-        fr_comma_semi: comma_semicolon {
+        csa_comma_semi: comma_semicolon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        fr_dot_colon: dot_colon {
+        csa_dot_colon: dot_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp FR_PERIOD>, <&kp FR_COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-                apostrophe_curly: apostrophe_curly {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp FR_APOS>, <&kp RA(FR_APOS)>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        fr_apos: apos_qmark {
+        csa_apos: apos_qmark {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp FR_APOS>, <&kp FR_QUESTION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        fr_caret: caret_exclam {
+        csa_caret: caret_exclam {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp FR_CARET>, <&kp FR_EXCLAMATION>;
@@ -529,9 +534,9 @@
         //                                                           │ ESC    FR_CA_SPC │ BSPC         SYM │ ENTER        NAV │                  │ OSM RALT         │ SPACE        SYM │ TAB    FR_CA_SPC │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &none           &lt  BLTH  FR_B     &kp  FR_E_ACUTE    &kp  FR_P            &kp  FR_O        &fr_egrv                             &fr_caret           &kp  FR_V          &kp  FR_D          &kp  FR_L          &kp  FR_J           &none
-                &none           &hml LWIN  FR_A     &hml LALT  FR_U    &hml LCTRL   FR_I    &hml LSHFT FR_E  &fr_comma_semi                       &kp  FR_C           &hmr RSHFT FR_T    &hmr RCTRL   FR_S  &hmr LALT  FR_R    &hmr RWIN  FR_N     &none
-                &none           &fr_agrv            &kp  FR_Y          &kp  FR_X            &fr_dot_colon    &kp FR_K                             &fr_apos            &kp  FR_Q          &kp  FR_G          &kp  FR_H          &lt  FCTN  FR_F     &none
+                &none           &lt  BLTH  FR_B     &kp  FR_E_ACUTE    &kp  FR_P            &kp  FR_O        &csa_egrv                            &csa_caret          &kp  FR_V          &kp  FR_D          &kp  FR_L          &kp  FR_J           &none
+                &none           &hml LWIN  FR_A     &hml LALT  FR_U    &hml LCTRL   FR_I    &hml LSHFT FR_E  &csa_comma_semi                      &kp  FR_C           &hmr RSHFT FR_T    &hmr RCTRL   FR_S  &hmr LALT  FR_R    &hmr RWIN  FR_N     &none
+                &none           &csa_agrv            &kp  FR_Y         &kp  FR_X            &csa_dot_colon   &kp FR_K                             &csa_apos           &kp  FR_Q          &kp  FR_G          &kp  FR_H          &lt  FCTN  FR_F     &none
                                                                        &lt2 FR_CA_SPC ESC   &bdlt SYM 0      &lt NAV ENTER                        &sk  RALT           &lt  SYM   SPACE   &lt2 FR_CA_SPC TAB
             >;
         }; 
@@ -548,10 +553,10 @@
         //                                                           │                  │                  │                  │                  │                  │                  │                  │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
            bindings = <
-                &none           &kp  FR_EQUAL        &kp  FR_DEG       &kp  FR_NEQ           &kp  FR_PRIME              &trans                      &trans             &trans            &trans             &trans             &kp FR_Z            &none 
-                &none           &hml LWIN FR_DOLLAR  &hml LALT CSA_HASH &hml LCTRL CSA_DASH &hml LSHIFT CSA_PARA        &trans                      &fr_cedille_c      &trans            &trans             &trans             &kp FR_M            &none 
-                &none           &kp  FR_PRCNT        &kp  FR_GRAVE     &kp RA(FR_N5)         &kp  FR_DPRIME             &trans                      &trans             &trans            &trans             &trans             &kp FR_W            &none 
-                                                                       &trans                &trans                     &trans                      &trans             &trans            &trans
+                &none           &kp  FR_EQUAL        &kp  FR_DEG        &kp  CSA_NEQ        &kp  CSA_PRIME             &trans                     &trans             &trans            &trans             &trans             &kp FR_Z            &none 
+                &none           &hml LWIN FR_DOLLAR  &hml LALT CSA_HASH &hml LCTRL CSA_DASH &hml LSHIFT CSA_PARA       &trans                     &csa_cedille_c     &trans            &trans             &trans             &kp FR_M            &none 
+                &none           &kp  FR_PRCNT        &kp  FR_GRAVE      &kp RA(FR_N5)       &kp  FR_DPRIME             &trans                     &trans             &trans            &trans             &trans             &kp FR_W            &none 
+                                                                        &trans              &trans                     &trans                     &trans             &trans            &trans
             >;
 
         };        
