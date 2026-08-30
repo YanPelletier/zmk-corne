@@ -19,13 +19,15 @@ jobs:
 
       - name: Install west
         run: |
-          python3 -m pip install --user west
+          python3 -m venv /tmp/west-venv
+          /tmp/west-venv/bin/pip install --upgrade pip
+          /tmp/west-venv/bin/pip install west
 
       - name: Initialize ZMK
         run: |
-          west init -m https://github.com/zmkfirmware/zmk.git --manifest-rev main .
-          west update
+          /tmp/west-venv/bin/west init -m https://github.com/zmkfirmware/zmk.git --manifest-rev main .
+          /tmp/west-venv/bin/west update
 
       - name: Build firmware
         run: |
-          west build -p auto -b nice_nano_v2 -- -DSHIELD="corne_left nice_view_adapter nice_view_battery" -DZMK_CONFIG=config
+          /tmp/west-venv/bin/west build -p auto -b nice_nano_v2 -- -DSHIELD="corne_left nice_view_adapter nice_view_battery" -DZMK_CONFIG=config
