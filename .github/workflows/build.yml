@@ -19,7 +19,6 @@ jobs:
 
       - name: Install west
         run: |
-          python3 -m pip install --break-system-packages --upgrade pip
           python3 -m pip install --break-system-packages west
 
       - name: Initialize ZMK
