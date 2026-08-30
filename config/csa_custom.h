@@ -5,6 +5,7 @@
 
 #pragma once
 
+#include <dt-bindings/zmk/unicode.h>
 #include "keys_fr_csa.h"
 
 #define CSA_DEG     UC(0x00B0)   // °
