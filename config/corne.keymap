@@ -205,6 +205,18 @@
                          39 40 41      36 37 38 
             >;       
         };
+        fr_comma_semi: comma_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        fr_dot_colon: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp FR_PERIOD>, <&kp FR_COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };                
     };
 
     macros {
@@ -239,6 +251,20 @@
             bindings
                 = <&macro_tap &bt BT_SEL 0>
                 , <&macro_tap &to WINDOWS>;
+        };
+        fr_egrv: fr_e_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp FR_E_GRAVE>
+                , <&macro_tap &kp FR_E>;
+        };
+        fr_agrv: fr_a_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp FR_A_GRAVE>
+                , <&macro_tap &kp FR_A>;
         };
     };
 
@@ -467,9 +493,9 @@
         //                                                           │ ESC      SPECIAL │ BSPC         SYM │ ENTER        NAV │                  │ OSM RALT         │ SPACE        SYM │ TAB      SPECIAL │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &none           &lt  BLTH  FR_B     &kp  FR_E_ACUTE    &kp  FR_P          &kp   FR_O         &kp FR_E_GRAVE                       &kp  FR_CARET       &kp  FR_V          &kp  FR_D          &kp  FR_L          &kp  FR_J           &none
-                &none           &hml LWIN  FR_A     &hml LALT  FR_U    &hml LCTRL   FR_I  &hml  LSHFT FR_E   &kp FR_COMMA                         &kp  FR_C           &hmr RSHFT FR_T    &hmr RCTRL   FR_S  &hmr LALT  FR_R    &hmr RWIN  FR_N     &none
-                &none           &kp  FR_A_GRAVE     &kp  FR_Y          &kp  FR_X          &kp   FR_DOT       &kp FR_K                             &kp  FR_APOS        &kp  FR_Q          &kp  FR_G          &kp  FR_H          &lt  FCTN  FR_F     &none
+                &none           &lt  BLTH  FR_B     &kp  FR_E_ACUTE    &kp  FR_P          &kp  FR_O          &fr_egrv                             &kp  FR_CARET       &kp  FR_V          &kp  FR_D          &kp  FR_L          &kp  FR_J           &none
+                &none           &hml LWIN  FR_A     &hml LALT  FR_U    &hml LCTRL   FR_I  &hml LSHFT FR_E    &kp fr_comma_semi                    &kp  FR_C           &hmr RSHFT FR_T    &hmr RCTRL   FR_S  &hmr LALT  FR_R    &hmr RWIN  FR_N     &none
+                &none           &fr_agrv            &kp  FR_Y          &kp  FR_X          &kp  fr_dot_colon  &kp FR_K                             &kp  FR_APOS        &kp  FR_Q          &kp  FR_G          &kp  FR_H          &lt  FCTN  FR_F     &none
                                                                        &lt2 SPECIAL ESC   &bdlt SYM 0        &lt NAV ENTER                        &sk  RALT           &lt  SYM   SPACE   &lt2 SPECIAL TAB
             >;
         };         
