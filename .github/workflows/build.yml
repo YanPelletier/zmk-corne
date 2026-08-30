@@ -19,6 +19,8 @@ jobs:
 
       - name: Install west
         run: |
+          apt-get update
+          apt-get install -y python3-venv
           python3 -m venv /tmp/west-venv
           /tmp/west-venv/bin/pip install --upgrade pip
           /tmp/west-venv/bin/pip install west
