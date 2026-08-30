@@ -533,9 +533,9 @@
         //                                                           │                  │                  │                  │                  │                  │                  │                  │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
            bindings = <
-                &none           &kp  CSA_EQ          &kp  CSA_DEG         &kp  CSA_NEQ          &kp  CSA_PRIME               &trans                     &trans             &trans            &trans             &trans             &kp FR_Z            &none 
-                &none           &hml LWIN CSA_DOLLAR &hml LALT CSA_HASH   &hml LCTRL CSA_DASH   &hml LSHIFT CSA_PARA         &trans                     &csa_cedille_c     &trans            &trans             &trans             &kp FR_M            &none 
-                &none           &kp  CSA_PERCENT     &kp  CSA_GRAVE       &kp  CSA_PERMIL       &kp  CSA_DPRIME              &trans                     &trans             &trans            &trans             &trans             &kp FR_W            &none 
+                &none           &kp  FR_EQUAL        &kp  CSA_DEG         &kp  CSA_NEQ          &kp  CSA_PRIME               &trans                     &trans             &trans            &trans             &trans             &kp FR_Z            &none 
+                &none           &hml LWIN FR_DOLLAR  &hml LALT CSA_HASH   &hml LCTRL CSA_DASH   &hml LSHIFT CSA_PARA         &trans                     &csa_cedille_c     &trans            &trans             &trans             &kp FR_M            &none 
+                &none           &kp  FR_PERCENT      &kp  FR_GRAVE        &kp  CSA_PERMIL       &kp  CSA_DPRIME              &trans                     &trans             &trans            &trans             &trans             &kp FR_W            &none 
                                                                           &trans                &trans                       &trans                     &trans             &trans            &trans
             >;
         };        
