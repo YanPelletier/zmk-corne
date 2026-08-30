@@ -331,3 +331,32 @@
 
 /* € */
 #define FR_EURO (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_E)))
+
+
+/****************************************************************************************************************
+ * Custom keycodes for Canadian Multilingual Standard
+ ****************************************************************************************************************/
+
+/* ≠ */
+#define FR_NOT_EQUAL (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))
+#define FR_NEQ (FR_NOT_EQUAL)
+
+/* ′ */
+#define FR_PRIME (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION)))
+#define FR_PRIM (FR_PRIME)
+
+/* – */
+#define FR_EN_DASH (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE)))
+#define FR_NDASH (FR_EN_DASH)
+
+/* ¶ */
+#define FR_PARAGRAPH (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_EQUAL_AND_PLUS)))
+#define FR_PARA (FR_PARAGRAPH)
+
+/* ‰ */
+#define FR_PER_MILLE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT)))
+#define FR_PERMILLE (FR_PER_MILLE)
+
+/* ″ */
+#define FR_DOUBLE_PRIME (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT)))
+#define FR_DPRIME (FR_DOUBLE_PRIME)

@@ -33,6 +33,7 @@
 #define MACOS       8
 #define NAV_MAC     9
 #define FR_CA      10
+#define FR_CA_SPC  11
 
 /* ============================================================
  * BÉPO 
@@ -508,14 +509,34 @@
         //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
         //  │                  │ À           FCTN │ Y                │ X                │ .                │ K                │                  │ ’                │ Q                │ G                │ H                │ F           FCTN │                  │
         //  └──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────┘
-        //                                                           │ ESC      SPECIAL │ BSPC         SYM │ ENTER        NAV │                  │ OSM RALT         │ SPACE        SYM │ TAB      SPECIAL │
+        //                                                           │ ESC    FR_CA_SPC │ BSPC         SYM │ ENTER        NAV │                  │ OSM RALT         │ SPACE        SYM │ TAB    FR_CA_SPC │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
             bindings = <
-                &none           &lt  BLTH  FR_B     &kp  FR_E_ACUTE    &kp  FR_P          &kp  FR_O          &fr_egrv                             &fr_caret           &kp  FR_V          &kp  FR_D          &kp  FR_L          &kp  FR_J           &none
-                &none           &hml LWIN  FR_A     &hml LALT  FR_U    &hml LCTRL   FR_I  &hml LSHFT FR_E    &fr_comma_semi                       &kp  FR_C           &hmr RSHFT FR_T    &hmr RCTRL   FR_S  &hmr LALT  FR_R    &hmr RWIN  FR_N     &none
-                &none           &fr_agrv            &kp  FR_Y          &kp  FR_X          &fr_dot_colon      &kp FR_K                             &fr_apos            &kp  FR_Q          &kp  FR_G          &kp  FR_H          &lt  FCTN  FR_F     &none
-                                                                       &lt2 SPECIAL ESC   &bdlt SYM 0        &lt NAV ENTER                        &sk  RALT           &lt  SYM   SPACE   &lt2 SPECIAL TAB
+                &none           &lt  BLTH  FR_B     &kp  FR_E_ACUTE    &kp  FR_P            &kp  FR_O        &fr_egrv                             &fr_caret           &kp  FR_V          &kp  FR_D          &kp  FR_L          &kp  FR_J           &none
+                &none           &hml LWIN  FR_A     &hml LALT  FR_U    &hml LCTRL   FR_I    &hml LSHFT FR_E  &fr_comma_semi                       &kp  FR_C           &hmr RSHFT FR_T    &hmr RCTRL   FR_S  &hmr LALT  FR_R    &hmr RWIN  FR_N     &none
+                &none           &fr_agrv            &kp  FR_Y          &kp  FR_X            &fr_dot_colon    &kp FR_K                             &fr_apos            &kp  FR_Q          &kp  FR_G          &kp  FR_H          &lt  FCTN  FR_F     &none
+                                                                       &lt2 FR_CA_SPC ESC   &bdlt SYM 0      &lt NAV ENTER                        &sk  RALT           &lt  SYM   SPACE   &lt2 FR_CA_SPC TAB
             >;
-        };         
+        }; 
+
+        layer_special { // Layer 11
+                display-name = "FR-CA-SPC";
+        //  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐                  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐
+        //  │                  │ =                │ °                │ ≠                │ ′                │                  │                  │                  │                  │                  │                  │ Z                │                  │
+        //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+        //  │                  │ $           LWIN │ #           LALT │ –          LCTRL │ ¶         LSHIFT │                  │                  │ Ç                │                  │                  │                  │ M                │                  │
+        //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+        //  │                  │ %                │ `                │ ‰                │ ″                │                  │                  │                  │                  │                  │                  │ W                │                  │
+        //  └──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────┘
+        //                                                           │                  │                  │                  │                  │                  │                  │                  │
+        //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
+           bindings = <
+                &none           &kp  FR_EQUAL        &kp  FR_DEG       &kp  FR_NEQ           &kp  FR_PRIME              &trans                      &trans             &trans            &trans             &trans             &kp FR_Z            &none 
+                &none           &hml LWIN FR_DOLLAR  &hml LALT FR_HASH &hml LCTRL FR_NDASH   &hml LSHIFT FR_PARA        &trans                      &kp FR_C_CEDILLA   &trans            &trans             &trans             &kp FR_M            &none 
+                &none           &kp  FR_PRCNT        &kp  FR_GRAVE     &kp FR_PERMILLE       &kp  FR_DPRIME             &trans                      &trans             &trans            &trans             &trans             &kp FR_W            &none 
+                                                                       &trans                &trans                     &trans                      &trans             &trans            &trans
+            >;
+
+        };        
     };
 };
