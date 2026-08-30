@@ -285,21 +285,21 @@
                 = <&macro_tap &bt BT_SEL 0>
                 , <&macro_tap &to WINDOWS>;
         };
-        fr_egrv: fr_e_grave {
+        csa_egrv: fr_e_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp FR_E_GRAVE>
                 , <&macro_tap &kp FR_E>;
         };
-        fr_agrv: fr_a_grave {
+        csa_agrv: fr_a_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp FR_E_GRAVE>
                 , <&macro_tap &kp FR_A>;
         };
-        fr_cedille_c: fr_cedille_c {
+        csa_cedille_c: fr_cedille_c {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
