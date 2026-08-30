@@ -109,21 +109,19 @@
  * BÉPO overide for CSA
  * ============================================================ */
 /* custom symbols not present in the generated Canadian CSA base */
-/* ≠ */
-#define CSA_NEQ (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))
-#define CSA_NOT_EQUAL (CSA_NEQ)
-/* # */
-#define CSA_HASH (LS(FR_N3))
-/* – */
-#define CSA_DASH (RA(FR_MINUS))
-/* ′ */
-#define CSA_PRIME (RA(FR_N1))
-/* ¶ */
-#define CSA_PARA (RA(FR_EQUAL))
-/* ‰ */
-#define CSA_PERMIL (RA(FR_N5))
-/* ″ */
-#define CSA_DPRIME (RA(FR_N2))
+#define CSA_EQ          FR_EQUAL
+#define CSA_DEG         FR_DEG
+#define CSA_NEQ         (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))
+#define CSA_NOT_EQUAL   (CSA_NEQ)
+#define CSA_DOLLAR      FR_DOLLAR
+#define CSA_HASH        (LS(FR_N3))
+#define CSA_DASH        (RA(FR_MINUS))
+#define CSA_PRIME       (RA(FR_N1))
+#define CSA_PARA        (RA(FR_EQUAL))
+#define CSA_PERCENT     FR_PERCENT
+#define CSA_GRAVE       FR_GRAVE
+#define CSA_PERMIL      (RA(FR_N5))
+#define CSA_DPRIME      (RA(FR_N2))
 
 / {
     behaviors {
@@ -552,10 +550,10 @@
         //                                                           │                  │                  │                  │                  │                  │                  │                  │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
            bindings = <
-                &none           &kp  FR_EQUAL        &kp  FR_DEG          &kp  CSA_NEQ        &kp  CSA_PRIME             &trans                     &trans             &trans            &trans             &trans             &kp FR_Z            &none 
-                &none           &hml LWIN FR_DOLLAR  &hml LALT CSA_HASH   &hml LCTRL CSA_DASH &hml LSHIFT CSA_PARA       &trans                     &csa_cedille_c     &trans            &trans             &trans             &kp FR_M            &none 
-                &none           &kp  FR_PRCNT        &kp  FR_GRAVE        &kp  CSA_PERMIL     &kp  CSA_DPRIME            &trans                     &trans             &trans            &trans             &trans             &kp FR_W            &none 
-                                                                          &trans              &trans                     &trans                     &trans             &trans            &trans
+                &none           &kp  CSA_EQ          &kp  CSA_DEG         &kp  CSA_NEQ          &kp  CSA_PRIME               &trans                     &trans             &trans            &trans             &trans             &kp FR_Z            &none 
+                &none           &hml LWIN CSA_DOLLAR &hml LALT CSA_HASH   &hml LCTRL CSA_DASH   &hml LSHIFT CSA_PARA         &trans                     &csa_cedille_c     &trans            &trans             &trans             &kp FR_M            &none 
+                &none           &kp  CSA_PERCENT     &kp  CSA_GRAVE       &kp  CSA_PERMIL       &kp  CSA_DPRIME              &trans                     &trans             &trans            &trans             &trans             &kp FR_W            &none 
+                                                                          &trans                &trans                       &trans                     &trans             &trans            &trans
             >;
         };        
     };
