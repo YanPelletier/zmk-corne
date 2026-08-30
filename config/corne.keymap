@@ -105,6 +105,16 @@
 #define BP_PMIL     RA(EQUAL)
 #define BP_GRAV     LS(EQUAL)
 
+/* ============================================================
+ * BÉPO overide for CSA
+ * ============================================================ */
+#define CSA_HASH (LS(FR_N3))
+#define CSA_DASH (RA(FR_MINUS))
+#define CSA_PRIME (RA(FR_N1))
+#define CSA_PARA (RA(FR_EQUAL))
+#define CSA_PERMIL RA(FR_N5)
+#define CSA_DPRIME RA(FR_N2)
+
 / {
     behaviors {
         bspc_del: backspace_delete {
@@ -235,7 +245,7 @@
             #binding-cells = <0>;
             bindings = <&kp FR_CARET>, <&kp FR_EXCLAMATION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };                            
+        };                              
     };
 
     macros {
@@ -284,6 +294,13 @@
             bindings
                 = <&macro_tap &kp FR_E_GRAVE>
                 , <&macro_tap &kp FR_A>;
+        };
+        fr_cedille_c: fr_cedille_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp FR_C_CEDILLA>
+                , <&macro_tap &kp FR_C>;
         };
     };
 
@@ -532,8 +549,8 @@
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
            bindings = <
                 &none           &kp  FR_EQUAL        &kp  FR_DEG       &kp  FR_NEQ           &kp  FR_PRIME              &trans                      &trans             &trans            &trans             &trans             &kp FR_Z            &none 
-                &none           &hml LWIN FR_DOLLAR  &hml LALT FR_HASH &hml LCTRL FR_NDASH   &hml LSHIFT FR_PARA        &trans                      &kp FR_C_CEDILLA   &trans            &trans             &trans             &kp FR_M            &none 
-                &none           &kp  FR_PRCNT        &kp  FR_GRAVE     &kp FR_PERMILLE       &kp  FR_DPRIME             &trans                      &trans             &trans            &trans             &trans             &kp FR_W            &none 
+                &none           &hml LWIN FR_DOLLAR  &hml LALT CSA_HASH &hml LCTRL CSA_DASH &hml LSHIFT CSA_PARA        &trans                      &fr_cedille_c      &trans            &trans             &trans             &kp FR_M            &none 
+                &none           &kp  FR_PRCNT        &kp  FR_GRAVE     &kp RA(FR_N5)         &kp  FR_DPRIME             &trans                      &trans             &trans            &trans             &trans             &kp FR_W            &none 
                                                                        &trans                &trans                     &trans                      &trans             &trans            &trans
             >;
 
