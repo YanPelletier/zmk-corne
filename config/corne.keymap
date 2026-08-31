@@ -524,19 +524,19 @@
         layer_fr_ca_special { // Layer 11
                 display-name = "FR-CA-SPC";
         //  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐                  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐
-        //  │                  │ =                │ °                │ ≠                │ ′                │                  │                  │                  │                  │                  │                  │ Z                │                  │
+        //  │                  │ =                │ °                │                  │                  │                  │                  │                  │                  │                  │                  │ Z                │                  │
         //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-        //  │                  │ $           LWIN │ #           LALT │ –          LCTRL │ ¶         LSHIFT │                  │                  │ Ç                │                  │                  │                  │ M                │                  │
+        //  │                  │ $           LWIN │ #           LALT │                  │                  │                  │                  │ Ç                │                  │                  │                  │ M                │                  │
         //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-        //  │                  │ %                │ `                │ ‰                │ ″                │                  │                  │                  │                  │                  │                  │ W                │                  │
+        //  │                  │ %                │ `                │                  │                  │                  │                  │                  │                  │                  │                  │ W                │                  │
         //  └──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────┘
         //                                                           │                  │                  │                  │                  │                  │                  │                  │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
            bindings = <
-                &none           &kp  FR_EQUAL        &kp  CSA_DEG         &kp  CSA_NEQ          &kp  CSA_PRIME               &trans                     &trans             &trans            &trans             &trans             &kp FR_Z            &none 
-                &none           &hml LWIN FR_DOLLAR  &hml LALT CSA_HASH   &hml LCTRL CSA_DASH   &hml LSHIFT CSA_PARA         &trans                     &csa_cedille_c     &trans            &trans             &trans             &kp FR_M            &none 
-                &none           &kp  FR_PERCENT      &kp  FR_GRAVE        &kp  CSA_PERMIL       &kp  CSA_DPRIME              &trans                     &trans             &trans            &trans             &trans             &kp FR_W            &none 
-                                                                          &trans                &trans                       &trans                     &trans             &trans            &trans
+                &none           &kp  FR_EQUAL        &kp  FR_DEG        &trans            &trans             &trans                               &trans             &trans             &trans             &trans             &kp FR_Z            &none 
+                &none           &hml LWIN FR_DOLLAR  &hml LALT FR_HASH  &trans            &trans             &trans                               &csa_cedille_c     &trans             &trans             &trans             &kp FR_M            &none 
+                &none           &kp  FR_PRCNT        &kp  FR_GRAVE      &trans            &trans             &trans                               &trans             &trans             &trans             &trans             &kp FR_W            &none 
+                                                                        &trans            &trans             &trans                               &trans             &trans             &trans
             >;
         };        
     };
