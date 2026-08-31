@@ -360,7 +360,7 @@
             bindings = <
                 &none           &trans              &trans            &trans           &trans             &trans                                   &trans             &trans              &kp FR_FRAC_1_4     &kp FR_FRAC_1_2     &kp FR_FRAC_3_4     &none
                 &none           &kp FR_DQT          &kp FR_LAQUO      &kp FR_RAQUO     &kp FR_LPAR        &kp FR_RPAR                              &kp FR_AT          &kp FR_PLUS         &kp FR_MINS         &kp FR_SLASH        &kp FR_STAR         &none
-                &none           &trans              &kp FR_LT         &kp FR_GT        &kp FR_LBKT        &kp FR_RBKT                              &fr_caret          &kp FR_PLUS_MINUS   &trans              &kp trans           &kp trans           &none
+                &none           &trans              &kp FR_LT         &kp FR_GT        &kp FR_LBKT        &kp FR_RBKT                              &fr_caret          &kp FR_PLUS_MINUS   &trans              &trans              &trans              &none
                                                                       &trans           &trans             &trans                                   &trans             &trans              &trans
             >;
         };                
