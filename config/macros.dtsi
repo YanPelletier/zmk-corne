@@ -36,21 +36,21 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp FR_E_GRAVE>
+                = <&macro_tap &kp FR_GRAVE>
                 , <&macro_tap &kp FR_E>;
         };
         csa_agrv: fr_a_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp FR_E_GRAVE>
+                = <&macro_tap &kp FR_GRAVE>
                 , <&macro_tap &kp FR_A>;
         };
         csa_cedille_c: fr_cedille_c {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp FR_C_CEDILLA>
+                = <&macro_tap &kp FR_CEDILLA>
                 , <&macro_tap &kp FR_C>;
         };
     };
