@@ -32,26 +32,40 @@
                 = <&macro_tap &bt BT_SEL 0>
                 , <&macro_tap &to WINDOWS>;
         };
-        csa_egrv: fr_e_grave {
+        fr_egrv: fr_e_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp FR_GRAVE>
                 , <&macro_tap &kp FR_E>;
         };
-        csa_agrv: fr_a_grave {
+        fr_agrv: fr_a_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp FR_GRAVE>
                 , <&macro_tap &kp FR_A>;
         };
-        csa_cedille_c: fr_cedille_c {
+        fr_cedille_c: fr_cedille_c {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp FR_CEDILLA>
                 , <&macro_tap &kp FR_C>;
         };
+        fr_grave: fr_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp FR_GRAVE>
+                , <&macro_tap &kp SPACE>;
+        };    
+        fr_caret: fr_caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp FR_CARET>
+                , <&macro_tap &kp SPACE>;
+        };    
     };
 };

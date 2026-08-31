@@ -97,25 +97,25 @@
                          39 40 41      36 37 38 
             >;       
         };
-        csa_comma_semi: comma_semicolon {
+        fr_comma_semi: comma_semicolon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        csa_dot_colon: dot_colon {
+        fr_dot_colon: dot_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp FR_PERIOD>, <&kp FR_COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        csa_apos: apos_qmark {
+        fr_apos: apos_qmark {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp FR_APOS>, <&kp FR_QUESTION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        csa_caret: caret_exclam {
+        fr_caret_excl: caret_exclam {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp FR_CARET>, <&kp FR_EXCLAMATION>;
