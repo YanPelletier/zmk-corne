@@ -105,6 +105,9 @@
 #define BP_PMIL     RA(EQUAL)
 #define BP_GRAV     LS(EQUAL)
 
+#define FR_NOT_EQUAL (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))
+#define FR_NEQ (FR_NOT_EQUAL)
+
 #include "behaviors.dtsi"
 #include "combos.dtsi"
 #include "macros.dtsi"
@@ -335,7 +338,7 @@
         //                                                           │                  │                  │                  │                  │                  │                  │                  │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
            bindings = <
-                &none           &kp  FR_EQUAL        &kp  FR_DEG        &trans            &trans               &trans                             &trans             &trans             &trans             &trans             &kp FR_Z            &none 
+                &none           &kp  FR_EQUAL        &kp  FR_DEG        &kp FR_NEQ        &trans               &trans                             &trans             &trans             &trans             &trans             &kp FR_Z            &none 
                 &none           &hml LWIN FR_DOLLAR  &hml LALT FR_HASH  &trans            &hml LSHIFT FR_PARA  &trans                             &csa_cedille_c     &trans             &trans             &trans             &kp FR_M            &none 
                 &none           &kp  FR_PRCNT        &kp  FR_GRAVE      &trans            &trans               &trans                             &trans             &trans             &trans             &trans             &kp FR_W            &none 
                                                                         &trans            &trans               &trans                             &trans             &trans             &trans
