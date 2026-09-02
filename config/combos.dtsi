@@ -14,7 +14,12 @@
         combo_fr_ca {
             timeout-ms = <50>;
             key-positions = < 25 26 27 28 >;
-            bindings = <&tog FR_CA>;
-        };        
+            bindings = <&to FR_CA>;
+        };    
+        combo_bepo {
+            timeout-ms = <50>;
+            key-positions = < 31 32 33 34 >;
+            bindings = <&to BEPO>;
+        };                
     };    
 };

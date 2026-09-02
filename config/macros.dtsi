@@ -30,7 +30,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &bt BT_SEL 0>
-                , <&macro_tap &to WINDOWS>;
+                , <&macro_tap &to BEPO>;
         };
         fr_egrv: fr_e_grave {
             compatible = "zmk,behavior-macro";
