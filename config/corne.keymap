@@ -320,7 +320,7 @@
                 &none           &lt  BLTH  FR_B     &kp  FR_E_ACUTE    &kp  FR_P            &kp  FR_O          &fr_egrv                           &fr_caret_excl     &kp  FR_V           &kp  FR_D          &kp  FR_L          &kp  FR_J           &none
                 &none           &hml LWIN  FR_A     &hml LALT  FR_U    &hml LCTRL   FR_I    &hml LSHFT FR_E    &fr_comma_semi                     &kp  FR_C          &hmr RSHFT FR_T     &hmr RCTRL   FR_S  &hmr LALT  FR_R    &hmr RWIN  FR_N     &none
                 &none           &fr_agrv            &kp  FR_Y          &kp  FR_X            &fr_dot_colon      &kp FR_K                           &fr_apos           &kp  FR_Q           &kp  FR_G          &kp  FR_H          &lt  FCTN  FR_F     &none
-                                                                       &lt2 FR_CA_SPC ESC   &bdlt FR_CA_SYM 0  &lt2 NAV ENTER                     &sk  RALT          &lt FR_CA_SYM SPACE &lt2 FR_CA_SPC TAB
+                                                                       &lt2 NAV ESC   &bdlt FR_CA_SYM 0  &lt FR_CA_SPC ENTER                     &sk  RALT          &lt FR_CA_SYM SPACE &lt2 FR_CA_SPC TAB
             >;
         }; 
 
