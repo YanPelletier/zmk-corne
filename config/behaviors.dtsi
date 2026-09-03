@@ -97,14 +97,6 @@
                          39 40 41      36 37 38 
             >;       
         };
-        lt_nav: layer_tap_nav {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <260>;
-            quick-tap-ms = <180>;
-            bindings = <&mo>, <&kp>;
-        };
         fr_comma_semi: comma_semicolon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
