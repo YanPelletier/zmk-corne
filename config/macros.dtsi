@@ -62,14 +62,6 @@
                 , <&macro_tap &kp FR_C>
                 , <&macro_release &kp LSHIFT>;
         };
-        fr_cced: fr_cedille_c {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            flavor = "hold-preferred";
-            bindings = <&fr_ucced>, <&fr_lcced>;
-        };
         fr_grave: fr_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
