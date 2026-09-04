@@ -223,10 +223,10 @@
         //                                                           │                  │                  │                  │                  │                  │                  │                  │
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
            bindings = <
-                &none           &kp  FR_EQUAL        &kp  FR_DEG        &trans            &trans               &trans                             &trans             &trans             &trans             &trans             &mt LS(FR_Z) FR_Z   &none 
-                &none           &hml LWIN FR_DOLLAR  &hml LALT FR_HASH  &trans            &hml LSHIFT FR_PARA  &trans                             &mt LS(FR_CEDILLA) FR_CEDILLA  &trans &trans             &trans             &mt LS(FR_M) FR_M   &none 
-                &none           &kp  FR_PRCNT        &fr_grave          &trans            &trans               &trans                             &trans             &trans             &trans             &trans             &mt LS(FR_W) FR_W   &none 
-                                                                        &trans            &trans               &trans                             &trans             &trans             &trans
+                &none           &kp  FR_EQUAL        &kp  FR_DEG        &trans            &trans               &trans                             &trans                &trans             &trans             &trans             &mt LS(FR_Z) FR_Z   &none 
+                &none           &hml LWIN FR_DOLLAR  &hml LALT FR_HASH  &trans            &hml LSHIFT FR_PARA  &trans                             &mt fr_ucced fr_cced  &trans             &trans             &trans             &mt LS(FR_M) FR_M   &none 
+                &none           &kp  FR_PRCNT        &fr_grave          &trans            &trans               &trans                             &trans                &trans             &trans             &trans             &mt LS(FR_W) FR_W   &none 
+                                                                        &trans            &trans               &trans                             &trans                &trans             &trans
             >;
         };
 
