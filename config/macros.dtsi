@@ -46,6 +46,10 @@
                 = <&macro_tap &kp FR_GRAVE>
                 , <&macro_tap &kp FR_A>;
         };
+
+
+
+
         fr_cedille_c_lower: fr_cedille_c_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -68,6 +72,9 @@
             bindings = <&fr_cedille_c_lower>, <&fr_cedille_c_upper>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+
+
         fr_grave: fr_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -81,6 +88,21 @@
             bindings
                 = <&macro_tap &kp FR_CARET>
                 , <&macro_tap &kp SPACE>;
-        };    
+        };
+        fr_u_grave: fr_u_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp FR_GRAVE>
+                , <&macro_tap &kp FR_U>;
+        };               
+        fr_sspnsn: fr_sspnsn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp FR_DOT>
+                , <&macro_tap &kp FR_DOT>
+                , <&macro_tap &kp FR_DOT>;
+        };               
     };
 };
