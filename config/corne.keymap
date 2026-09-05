@@ -20,7 +20,7 @@
 #include "keys_fr_csa.h"
 
 /* ============================================================
- * LAYER NUMBERS
+ * LAYER NUMBERS
  * ============================================================ */
 #define BEPO        0
 #define SPECIAL     1
@@ -225,7 +225,7 @@
         //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
            bindings = <
                 &none           &kp  FR_EQUAL        &kp  FR_DEG        &trans            &trans               &trans                             &trans                &trans             &trans             &trans             &mt LS(FR_Z) FR_Z   &none 
-                &none           &hml LWIN FR_DOLLAR  &hml LALT FR_HASH  &trans            &hml LSHIFT FR_PARA  &trans                             &fr_cced 0 0          &trans             &trans             &trans             &mt LS(FR_M) FR_M   &none
+                &none           &hml LWIN FR_DOLLAR  &hml LALT FR_HASH  &trans            &hml LSHIFT FR_PARA  &trans                             &fr_cced              &trans             &trans             &trans             &mt LS(FR_M) FR_M   &none
                 &none           &kp  FR_PRCNT        &fr_grave          &trans            &trans               &trans                             &trans                &trans             &trans             &trans             &mt LS(FR_W) FR_W   &none 
                                                                         &trans            &trans               &trans                             &trans                &trans             &trans
             >;

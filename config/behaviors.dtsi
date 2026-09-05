@@ -98,12 +98,10 @@
             >;       
         };
         fr_cced: fr_cedille_c {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            bindings = <&fr_ucced>, <&fr_lcced>;
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&fr_lcced>, <&fr_ucced>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         fr_comma_semi: comma_semicolon {
             compatible = "zmk,behavior-mod-morph";
