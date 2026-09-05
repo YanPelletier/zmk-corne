@@ -36,6 +36,7 @@
 #define FCTN       11
 #define NAV        12
 #define ALTDR      13
+#define FR_CA_FCTN 14
 
 /* ============================================================
  * BÉPO 
@@ -206,7 +207,7 @@
             bindings = <
                 &none           &lt  BLTH  FR_B     &kp  FR_E_ACUTE    &kp  FR_P            &kp  FR_O          &fr_egrv                           &fr_caret_excl     &kp  FR_V           &kp  FR_D          &kp  FR_L          &kp  FR_J           &none
                 &none           &hml LWIN  FR_A     &hml LALT  FR_U    &hml LCTRL   FR_I    &hml LSHFT FR_E    &fr_comma_semi                     &kp  FR_C          &hmr RSHFT FR_T     &hmr RCTRL   FR_S  &hmr LALT  FR_R    &hmr RWIN  FR_N     &none
-                &none           &fr_agrv            &kp  FR_Y          &kp  FR_X            &fr_dot_colon      &kp FR_K                           &fr_apos           &kp  FR_Q           &kp  FR_G          &kp  FR_H          &lt  FCTN  FR_F     &none
+                &none           &fr_agrv            &kp  FR_Y          &kp  FR_X            &fr_dot_colon      &kp FR_K                           &fr_apos           &kp  FR_Q           &kp  FR_G          &kp  FR_H          &lt FR_CA_FCTN FR_F &none
                                                                        &lt2 FR_CA_SPC ESC   &bdlt FR_CA_SYM 0  &lt NAV ENTER                      &sl  ALTDR         &lt FR_CA_SYM SPACE &lt2 FR_CA_SPC TAB
             >;
         }; 
@@ -380,6 +381,26 @@
                 &none           &kp FR_BSLH        &kp FR_LBRC         &kp FR_RBRC        &fr_sspnsn         &kp FR_TILDE                          &trans             &trans             &kp FR_MU          &trans             &trans             &none 
                                                                        &trans             &trans             &trans                                &trans             &kp FR_UNDER       &trans 
             >;
-        };                 
+        };
+
+       layer_fr_ca_fun { // Layer 14
+                display-name = "CHIFFRES";
+        //  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐                  ┌──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┐
+        //  │                  │ F1               │ F2               │ F3               │ F4               │ F5               │                  │ F6               │ F7               │ F8               │ F9               │ F10              │                  │
+        //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+        //  │                  │ 1                │ 2                │ 3                │ 4                │ 5                │                  │ 6                │ 7                │ 8                │ 9                │ 0                │                  │
+        //  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+        //  │                  │                  │ VOL-        LALT │ MUTE       LCTRL │ VOL+      LSHIFT │ F11              │                  │ F12              │ PREV      RSHIFT │ STOP       RCTRL │ PLAY        LALT │ NEXT        RWIN │                  │
+        //  └──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤                  ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────┘
+        //                                                           │                  │                  │                  │                  │                  │                  │                  │
+        //                                                           └──────────────────┴──────────────────┴──────────────────┘                  └──────────────────┴──────────────────┴──────────────────┘
+            bindings = <
+                &none           &kp F1              &kp F2             &kp F3             &kp F4             &kp F5                                &kp F6             &kp F7            &kp F8           &kp F9          &kp F10            &none
+                &none           &kp FR_1            &kp FR_2           &kp FR_3           &kp FR_4           &kp FR_5                              &kp FR_6           &kp FR_7          &kp FR_8         &kp FR_9        &kp FR_0           &none
+                &none           &trans              &mt LALT C_VOL_DN  &mt LCTRL C_MUTE   &mt LSHFT C_VOL_UP &kp F11                               &kp F12            &mt RSHFT C_PREV  &mt RCTRL C_STOP &mt LALT C_PP   &mt RGUI C_NEXT    &none
+                                                                       &trans             &trans             &trans                                &trans             &trans            &trans
+            >;
+        };
+
     };
 };
