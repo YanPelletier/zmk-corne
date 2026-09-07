@@ -39,7 +39,7 @@
                 = <&macro_tap &kp FR_GRAVE>
                 , <&macro_tap &kp FR_E>;
         };
-        fr_agrv: fr_a_grave {
+        fr_agrv_tap: fr_a_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings

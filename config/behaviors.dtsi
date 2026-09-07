@@ -105,6 +105,14 @@
             quick-tap-ms = <150>;
             bindings = <&fr_ucced>, <&fr_lcced>;
         };
+        fr_agrv: fr_a_grave_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&mo>, <&fr_agrv_tap>;
+        };
         fr_comma_semi: comma_semicolon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
