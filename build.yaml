@@ -20,8 +20,8 @@
 ---
 include:
   - board: nice_nano//zmk
-    shield: corne_left nice_view_adapter nice_view_sno1
+    shield: corne_left nice_view_adapter nice_view
   - board: nice_nano//zmk
-    shield: corne_right nice_view_adapter nice_view_sno1
+    shield: corne_right nice_view_adapter nice_view
   - board: nice_nano//zmk
     shield: settings_reset
