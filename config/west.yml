@@ -19,5 +19,6 @@ manifest:
     - name: nice-view-battery
       remote: infely
       revision: main
+      path: modules/nice-view-battery
   self:
     path: config
