@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: YanPelletier
       url-base: https://github.com/YanPelletier
-    - name: geratrevino115
-      url-base: https://github.com/geratrevino115/nice-view-battery
+    - name: kevinpastor
+      url-base: https://github.com/kevinpastor
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -16,9 +16,9 @@ manifest:
       remote: YanPelletier
       revision: main
       path: modules/ecaps-word
-    - name: nice-view-battery
-      remote: geratrevino115
+    - name: nice-view-elemental
+      remote: kevinpastor
       revision: main
-      path: modules/nice-view-battery
+      path: modules/nice-view-elemental
   self:
     path: config
