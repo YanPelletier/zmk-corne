@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: YanPelletier
       url-base: https://github.com/YanPelletier
-    - name: infely
-      url-base: https://github.com/infely
+    - name: geratrevino115
+      url-base: https://github.com/geratrevino115/nice-view-battery
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -17,7 +17,7 @@ manifest:
       revision: main
       path: modules/ecaps-word
     - name: nice-view-battery
-      remote: infely
+      remote: geratrevino115
       revision: main
       path: modules/nice-view-battery
   self:
